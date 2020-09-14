@@ -1,0 +1,14 @@
+#socials {
+    padding-bottom: 3rem;
+    padding-top: 8rem;
+}
+
+.social-media-icon {
+    margin: 3%;
+    color: #fff;
+  }
+  
+  .social-media-icon:hover {
+    color: #ededed;
+    opacity: 0.3;
+  }

@@ -1,117 +1,139 @@
 import React from "react";
 import "./Home.css";
-
+import AddonItem from "../AddonItem/AddonItem";
 
 function Home() {
-    return (
-        <div className="pad" id="map">
-            <ul className="addon-list">
-                <li>
-                    <h2 className="addon-title">Map</h2>
-                    <img className="addon-img" height="700" src="/images/map.jpg" alt="map img"/>
-                <div>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• WUBwub </p> 
-                </div>
-                </li>
-            <hr id="chat"/>
-                <li>
-                    <h2 className="addon-title">Chat</h2>
-                    <img className="addon-img" src="/images/placeholder.png" alt="chat img"/>
-                <div>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• WUBwub </p> 
-                </div>                   
-                </li>
-            <hr id="raidframes"/>
-                <li>
-                    <h2 className="addon-title">Raidframes</h2>
-                    <img className="addon-img" src="/images/placeholder.png" alt="raidframes img"/>
-                <div>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• WUBwub </p> 
-                </div>
-                </li>
-                
-            <hr id="unitframes"/>
-            <li>
-                    <h2 className="addon-title">Unitframes</h2>
-                    <img className="addon-img" src="/images/placeholder.png" alt="unitframes img"/>
-                    <div className="w3-container w3-center w3-animate-left">
-                        <h6 className="addon-body">• hello</h6>
-                        <h6 className="addon-body">• hello</h6>
-                        <h6 className="addon-body">• WUBwub </h6>
-                </div>
-                </li>
-            <hr id="actionbar"/>
-            <li>
-                    <h2 className="addon-title">Actionbar</h2>
-                    <img className="addon-img" src="/images/actionbar.png" alt="actionbar img"/>
-                <div>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• WUBwub </p> 
-                </div>
-                </li>
-            <hr id="questing"/>
-            <li>
-                    <h2 className="addon-title">Questing</h2>
-                    <img className="addon-img" src="/images/placeholder.png" alt="questing img"/>
-                <div>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• WUBwub </p> 
-                </div>
-                </li>
-            <hr id="textures"/>
-            <li>
-                    <h2 className="addon-title">Textures/Icons</h2>
-                    <img className="addon-img" src="/images/placeholder.png" alt="textures img"/>
-                <div>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• WUBwub </p> 
-                </div>
-                </li>
-            <hr id="minimap"/>
-            <li>
-                    <h2 className="addon-title">Minimap</h2>
-                    <img className="addon-img" src="/images/placeholder.png" alt="minimap img"/>
-                <div>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• WUBwub </p> 
-                </div>
-                </li>
-            <hr id="buffs"/>
-            <li>
-                    <h2 className="addon-title">Buffs/Debuffs</h2>
-                    <img className="addon-img" src="/images/placeholder.png" alt="buff img"/>
-                <div>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• WUBwub </p> 
-                </div>
-                </li>
-            <hr id="swingtimer"/>
-            <li>
-                    <h2 className="addon-title">Swingtimer</h2>
-                    <img className="addon-img" src="/images/placeholder.png" alt="swingtimer img"/>
-                <div>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• hello</p>
-                    <p className="addon-body">• WUBwub </p> 
-                </div>
-                </li>
-            </ul>
+  const appearOptions = {};
 
-            <img class="background-img" src="/images/wes.jpg" alt=""></img>
-        </div>
+  const faders = document.querySelectorAll(".fade-in");
 
-    )
+  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add("appear");
+        appearOnScroll.unobserve(entry.target);
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach((fader) => {
+    appearOnScroll.observe(fader);
+  });
+
+  return (
+    <div id="map" className="pad">
+      <ul>
+        <AddonItem
+          addonTitle="Map"
+          imgSrc="/images/map.jpg"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="1"
+          id="map"
+          alt="map-img"
+        />
+        <AddonItem
+          addonTitle="Chat"
+          imgSrc="/images/placeholder.png"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="2"
+          id="raidframes"
+          alt="chat-img"
+        />
+        <AddonItem
+          addonTitle="Raidframes"
+          imgSrc="/images/placeholder.png"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="3"
+          id="unitframes"
+          alt="raidframes-img"
+        />
+        <AddonItem
+          addonTitle="Unitframes"
+          imgSrc="/images/placeholder.png"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="4"
+          id="actionbar"
+          alt="unitframes-img"
+        />
+        <AddonItem
+          addonTitle="Actionbar"
+          imgSrc="/images/actionbar.png"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="5"
+          id="questing"
+          alt="actionbar-img"
+        />
+        <AddonItem
+          addonTitle="Questing"
+          imgSrc="/images/placeholder.png"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="6"
+          id="textures"
+          alt="questing-img"
+        />
+        <AddonItem
+          addonTitle="Textures"
+          imgSrc="/images/placeholder.png"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="7"
+          id="minimap"
+          alt="textures-img"
+        />
+        <AddonItem
+          addonTitle="Minimap"
+          imgSrc="/images/placeholder.png"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="8"
+          id="buffs"
+          alt="minimap-img"
+        />
+        <AddonItem
+          addonTitle="Buffs"
+          imgSrc="/images/placeholder.png"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="9"
+          id="buffs"
+          alt="buffs-img"
+        />
+        <AddonItem
+          addonTitle="Swingtimer"
+          imgSrc="/images/placeholder.png"
+          b1="abc"
+          b2="another bulletpoint with addon info"
+          b3="another bulletpoint with addon info 2"
+          key="10"
+          id="swingtimer"
+          alt="swingtimer-img"
+          last={true}
+        />
+      </ul>
+      <img
+        className="background-img"
+        src="/images/wes.jpg"
+        alt="backround-img"
+      ></img>
+    </div>
+  );
 }
 
 export default Home;

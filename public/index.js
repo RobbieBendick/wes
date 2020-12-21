@@ -1,7 +1,6 @@
-
-$(document).ready(function(){
+$(document).ready(function() {
   // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  $("a").on('click', function() {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -15,11 +14,23 @@ $(document).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
+      }, 800, () => {
+  
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   });
 });
+
+
+// onHover, display a solid border around "display" class
+
+// $(document).ready(() => {
+//   $(".onHover").hover(() => {
+//       $(".display").css("border", "5px red solid");
+//   });
+//   $(".onHover").mouseleave(() => {
+//       $(".display").css("border", "none");
+//   });
+// });

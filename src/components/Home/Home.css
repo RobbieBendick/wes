@@ -1,15 +1,24 @@
 .pad {
-    padding-top: 8rem;
+  padding-top: 8rem;
 }
 
 .addon-title {
-    color: #fff;
-    font-family: 'Russo One', sans-serif;
-    letter-spacing: 1.5px;
+  color: #fff;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 1.5px;
 }
 
 .addon-img {
-    padding: 2.5rem 0 3rem 0;
+  padding: 2.5rem 0 3rem 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 350ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
 }
 
 .background-img {
@@ -24,7 +33,7 @@
 }
 
 .addon-body {
-    color: #fff;
-    font-family: 'Gothic A1', sans-serif;
-    text-shadow: 0.5px 0.5px #b3b3b3;
+  color: #fff;
+  font-family: "Gothic A1", sans-serif;
+  text-shadow: 0.5px 0.5px #b3b3b3;
 }

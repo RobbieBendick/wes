@@ -1,0 +1,69 @@
+.pad {
+  padding-top: 8rem;
+}
+
+.addon-title {
+  color: #fff;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.addon-img {
+  padding: 2.5rem 0 3rem 0;
+  width: 600px;
+  height: 300px;
+}
+
+.background-img {
+  z-index: -1;
+  filter: blur(2px) grayscale(60%);
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.addon-body {
+  color: #fff;
+  font-family: "Gothic A1", sans-serif;
+  text-shadow: 0.5px 0.5px #b3b3b3;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  padding: 18px;
+  width: 3%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 5rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+.content {
+  transition-property: color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.3s;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}

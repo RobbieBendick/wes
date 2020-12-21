@@ -1,15 +1,16 @@
-html, body {
-  font-family: 'Montserrat', sans-serif;
+html,
+body {
+  font-family: "Montserrat", sans-serif;
 }
-
-
 
 a:hover {
   color: #b3b3b3;
   opacity: 0.8;
 }
 
-ul, li, p {
+ul,
+li,
+p {
   color: #b3b3b3;
 }
 
@@ -27,7 +28,7 @@ hr {
 
 .header {
   min-height: 10vh;
-  background-color: #0E0E0F;
+  background-color: #0e0e0f;
   border-bottom: dotted 1px;
 }
 
@@ -41,7 +42,7 @@ hr {
 .sidebar {
   position: fixed;
   min-height: 100vh;
-  background-color: #0E0E0F;
+  background-color: #0e0e0f;
   min-width: 9%;
   border-right: #ededed 6px;
 }

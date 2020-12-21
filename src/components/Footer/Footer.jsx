@@ -5,9 +5,8 @@ import "./Footer.css";
 function Footer() {
 
 return(
-    <div>
-        
-    </div>
+        <div id="swingtimer" style={{paddingBottom: "12rem"}}>
+        </div>
     )
 }
 export default Footer;

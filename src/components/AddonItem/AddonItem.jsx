@@ -13,25 +13,6 @@ function AddonItem({ addonTitle, imgSrc, alt, b1, b2, b3, id, last }) {
     buttons.push(<i className="fas fa-plus"></i>);
   }
 
-  const appearOptions = {};
-
-  const faders = document.querySelectorAll(".fade-in");
-
-  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      } else {
-        entry.target.classList.add("appear");
-        appearOnScroll.unobserve(entry.target);
-      }
-    });
-  }, appearOptions);
-
-  faders.forEach((fader) => {
-    appearOnScroll.observe(fader);
-  });
-
   return (
     <div>
       <button

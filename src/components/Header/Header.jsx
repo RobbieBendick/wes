@@ -2,10 +2,16 @@ import React from "react";
 import "./Header.css";
 
 function Header() {
+  function smoothScroll() {
+    document.querySelector("#map").scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="navv">
       <nav className="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow header">
-        <a className="navbar-brand ml-5" href="#map">
+        <a className="navbar-brand ml-5" onClick={smoothScroll}>
           <i className="fas fa-home fa-2x"></i>
         </a>
         <div className="nav-right">

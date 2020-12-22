@@ -3,25 +3,6 @@ import "./Home.css";
 import AddonItem from "../AddonItem/AddonItem";
 
 function Home() {
-  const appearOptions = {};
-
-  const faders = document.querySelectorAll(".fade-in");
-
-  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      } else {
-        entry.target.classList.add("appear");
-        appearOnScroll.unobserve(entry.target);
-      }
-    });
-  }, appearOptions);
-
-  faders.forEach((fader) => {
-    appearOnScroll.observe(fader);
-  });
-
   return (
     <div id="map" className="pad">
       <ul>

@@ -2,6 +2,45 @@
   padding-top: -3rem;
 }
 
+.homeCard.narrow ul img {
+  width: 250px;
+  height: 200px;
+}
+
+.homeCard.narrow button {
+  width: 20%;
+  text-align: center;
+}
+
+.homeCard.narrow ul li {
+  padding-left: 10px;
+}
+
+.homeCard.med {
+  padding-left: 150px;
+}
+
+.homeCard.med ul img {
+  width: 400px;
+  height: 300px;
+}
+
+.homeCard.med p {
+  font-size: x-large;
+}
+
+.homeCard.med nav div ul li {
+  padding-bottom: 10px;
+}
+
+.homeCard.wide {
+  padding-bottom: 150px;
+}
+
+.homeCard.narrow {
+  padding-bottom: 150px;
+}
+
 .addon-title {
   color: #fff;
   font-family: "Russo One", sans-serif;

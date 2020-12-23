@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import AddonItem from "../AddonItem/AddonItem";
+import useWindowSize from "../hooks/useWindowSize";
 
 function Home() {
+  const windowSize = useWindowSize();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Sinch's Addons";
+  });
+
+  return (
+    <div
+      className={`homeCard ${
+        windowSize.width > 600 && windowSize.width < 1100
+          ? "med"
+          : windowSize.width <= 500
+          ? "narrow"
+          : "wide"
+      }`}
+    >
+      <HomeCard></HomeCard>
+    </div>
+  );
+}
+
+function HomeCard() {
   return (
     <div id="map" className="pad">
       <ul>

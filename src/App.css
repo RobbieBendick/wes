@@ -2,11 +2,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 800px) {
-  div.App {
-    margin-right: 50px;
-    display: flex;
-  }
+.App.narrow {
 }
 
 a:not([href]) {

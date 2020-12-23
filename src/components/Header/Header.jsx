@@ -1,7 +1,10 @@
 import React from "react";
 import "./Header.css";
+import useWindowSize from "../hooks/useWindowSize";
 
 function Header() {
+  const windowSize = useWindowSize();
+
   function smoothScroll() {
     document.querySelector("#map").scrollIntoView({
       behavior: "smooth",
@@ -11,9 +14,15 @@ function Header() {
   return (
     <div className="navv">
       <nav className="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow header">
-        <a className="navbar-brand ml-5" onClick={smoothScroll}>
-          <i className="fas fa-home fa-2x"></i>
-        </a>
+        {windowSize.width < 1000 && (
+          <i style={{ color: "#fff" }} className="fas fa-bars fa-2x ml-4"></i>
+        )}
+        {windowSize.width >= 1001 && (
+          <a className="navbar-brand ml-5" onClick={smoothScroll}>
+            <i className="fas fa-home fa-2x"></i>
+          </a>
+        )}
+
         <div className="nav-right">
           <ul className="px-3 social">
             <a

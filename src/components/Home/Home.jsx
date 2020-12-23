@@ -16,7 +16,7 @@ function Home() {
       className={`homeCard ${
         windowSize.width > 600 && windowSize.width < 1100
           ? "med"
-          : windowSize.width <= 500
+          : windowSize.width <= 600
           ? "narrow"
           : "wide"
       }`}

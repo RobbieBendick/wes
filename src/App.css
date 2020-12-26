@@ -4,9 +4,3 @@
 
 .App.narrow {
 }
-
-a:not([href]) {
-  cursor: pointer;
-  color: #d3d3d3;
-  text-decoration: none;
-}

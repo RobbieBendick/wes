@@ -1,21 +1,24 @@
 import React from "react";
 import "./Sidebar.css";
+import Copyright from "../Copyright/Copyright";
+import useWindowSize from "../hooks/useWindowSize";
 
 function Sidebar() {
+  const windowSize = useWindowSize();
   return (
     <nav className="navbar-expand-lg d-none d-md-block sidebar">
       <div className="sidebar-sticky sidebar-content">
-        <ul className="nav flex-column mb-2">
-          <ListItem title="Map" href="#map" />
-          <ListItem title="Chat" href="#chat" />
-          <ListItem title="Raidframes" href="#raidframes" />
-          <ListItem title="Unitframes" href="#unitframes" />
-          <ListItem title="Actionbar" href="#actionbar" />
-          <ListItem title="Questing" href="#questing" />
-          <ListItem title="Textures/Icons" href="#textures" />
-          <ListItem title="Minimap" href="#minimap" />
-          <ListItem title="Buffs/Debuffs" href="#buffs" />
-          <ListItem title="Swingtimer" href="#swingtimer" />
+        <ul className="nav flex-column mb-2 rob">
+          <ListItem title="Map" href="#chat" />
+          <ListItem title="Chat" href="#raidframes" />
+          <ListItem title="Raidframes" href="#unitframes" />
+          <ListItem title="Unitframes" href="#actionbar" />
+          <ListItem title="Actionbar" href="#questing" />
+          <ListItem title="Questing" href="#textures" />
+          <ListItem title="Textures/Icons" href="#minimap" />
+          <ListItem title="Minimap" href="#buffs" />
+          <ListItem title="Buffs/Debuffs" href="#swingtimer" />
+          <ListItem title="Swingtimer" href="#footer" />
         </ul>
       </div>
     </nav>
@@ -26,7 +29,7 @@ function ListItem({ title, href }) {
   function smoothScroll() {
     document.querySelector(href).scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "end",
     });
   }
 

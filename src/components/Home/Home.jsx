@@ -111,13 +111,13 @@ function HomeCard() {
           alt="minimap-img"
         />
         <AddonItem
-          addonTitle="Buffs"
+          addonTitle="Buffs/Bebuffs"
           imgSrc="/images/placeholder.png"
           b1="abc"
           b2="another bulletpoint with addon info"
           b3="another bulletpoint with addon info 2"
           key="9"
-          id="buffs"
+          id="swingtimer"
           alt="buffs-img"
         />
         <AddonItem
@@ -127,7 +127,7 @@ function HomeCard() {
           b2="another bulletpoint with addon info"
           b3="another bulletpoint with addon info 2"
           key="10"
-          id="swingtimer"
+          id=""
           alt="swingtimer-img"
           last={true}
         />

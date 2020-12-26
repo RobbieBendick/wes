@@ -1,5 +1,11 @@
 .sidebar-title {
-    color: #b3b3b3;
-    font-family: 'Patua One', cursive;
-    letter-spacing: 0.5px;
+  color: #b3b3b3;
+  font-family: "Patua One", cursive;
+  letter-spacing: 0.5px;
+}
+
+.rob a:not([href]) {
+  cursor: pointer;
+  color: #d3d3d3;
+  text-decoration: none;
 }

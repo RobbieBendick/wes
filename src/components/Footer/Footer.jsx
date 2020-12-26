@@ -15,7 +15,7 @@ function Footer() {
           : "narrow"
       }`}
     >
-      <CopyrightCard></CopyrightCard>
+      <FooterCard></FooterCard>
     </div>
   );
 }
@@ -29,7 +29,6 @@ function FooterCard() {
         style={{
           fontSize: "11px",
           textAlign: "center",
-          marginLeft: "20px",
           color: "#fff",
         }}
       >

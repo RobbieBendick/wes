@@ -1,18 +1,5 @@
 import React from "react";
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function (event) {
-  if (!event.target.matches(".dropbtn")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
+import "./DropDown.css";
 
 function DropDown() {
   return (
@@ -39,13 +26,27 @@ function DropDown() {
         <DropDownListItem title="Textures/Icons" href="#minimap" />
         <DropDownListItem title="Minimap" href="#buffs" />
         <DropDownListItem title="Buffs/Debuffs" href="#swingtimer" />
-        <DropDownListItem title="Swingtimer" href="#footer" />
+        <DropDownListItem title="Swingtimer" href="#footer" last={true} />
       </div>
     </div>
   );
 }
 
-function DropDownListItem({ title, href }) {
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = (event) => {
+  if (!event.target.matches(".dropbtn")) {
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    let i;
+    for (i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
+
+function DropDownListItem({ title, href, last }) {
   function smoothScroll() {
     document.querySelector(href).scrollIntoView({
       behavior: "smooth",
@@ -54,9 +55,16 @@ function DropDownListItem({ title, href }) {
   }
   return (
     <>
-      <a style={{ border: "0.1rem black dotted" }} onClick={smoothScroll}>
-        {title}
-      </a>
+      {last ? (
+        <a onClick={smoothScroll}>{title}</a>
+      ) : (
+        <a
+          style={{ borderBottom: "0.1rem black dotted" }}
+          onClick={smoothScroll}
+        >
+          {title}
+        </a>
+      )}
     </>
   );
 }

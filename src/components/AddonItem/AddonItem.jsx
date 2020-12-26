@@ -4,9 +4,8 @@ import SmoothCollapse from "react-smooth-collapse";
 
 function AddonItem({ addonTitle, imgSrc, alt, b1, b2, b3, id, last }) {
   const [toggle, setToggle] = useState(true);
-  const buttons = [];
   const hr = id === "map" ? "chat" : id;
-
+  const buttons = [];
   if (toggle) {
     buttons.push(<i className="fas fa-minus"></i>);
   } else {

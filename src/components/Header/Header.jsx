@@ -17,7 +17,11 @@ function Header() {
     <div className="navv">
       <nav className="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow header">
         {windowSize.width >= 1001 ? (
-          <a className="navbar-brand ml-5" onClick={smoothScroll}>
+          <a
+            style={{ cursor: "pointer" }}
+            className="navbar-brand ml-5"
+            onClick={smoothScroll}
+          >
             <i className="fas fa-home fa-2x"></i>
           </a>
         ) : (

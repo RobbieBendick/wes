@@ -1,10 +1,20 @@
 import React from "react";
 
-// TO DO LIST:
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
 
-// whenever the user click on any part of the site, the dropdown should close.
-
-function DropDown({}) {
+function DropDown() {
   return (
     <div className="dropdown">
       <button
@@ -42,7 +52,12 @@ function DropDownListItem({ title, href }) {
       block: "end",
     });
   }
-  return <a onClick={smoothScroll}>{title}</a>;
+  return (
+    <>
+      <a style={{ border: "0.1rem black dotted" }} onClick={smoothScroll}>
+        {title}
+      </a>
+    </>
+  );
 }
-
 export default DropDown;

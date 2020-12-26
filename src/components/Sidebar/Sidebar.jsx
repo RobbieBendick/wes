@@ -1,10 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
-import Copyright from "../Copyright/Copyright";
-import useWindowSize from "../hooks/useWindowSize";
 
 function Sidebar() {
-  const windowSize = useWindowSize();
   return (
     <nav className="navbar-expand-lg d-none d-md-block sidebar">
       <div className="sidebar-sticky sidebar-content">

@@ -31,7 +31,6 @@ function DropDown() {
     </div>
   );
 }
-
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = (event) => {
   if (!event.target.matches(".dropbtn")) {

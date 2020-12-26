@@ -14,30 +14,30 @@ function AddonItem({ addonTitle, imgSrc, alt, b1, b2, b3, id, last }) {
 
   return (
     <div>
-      <button
+      <a
         onClick={() => setToggle(!toggle)}
         type="button"
         className="collapsible"
       >
         {buttons}
-      </button>
+      </a>
       {toggle ? (
-        <SmoothCollapse expanded="true" heightTransition="0.7s ease">
+        <SmoothCollapse expanded={true} heightTransition="0.8s ease">
           <li className="content">
             <h2 className="addon-title">{addonTitle}</h2>
             <img className="addon-img" src={imgSrc} alt={alt} />
-            <p className="addon-body onHover">• {b1}</p>
+            <p className="addon-body">• {b1}</p>
             <p className="addon-body">• {b2}</p>
             <p className="addon-body">• {b3}</p>
           </li>
           {!last && <hr id={hr} />}
         </SmoothCollapse>
       ) : (
-        <SmoothCollapse>
+        <SmoothCollapse expanded={false} heightTransition="0.6s ease">
           <li className="content">
             <h2 className="addon-title">{addonTitle}</h2>
             <img className="addon-img" src={imgSrc} alt={alt} />
-            <p className="addon-body onHover">• {b1}</p>
+            <p className="addon-body">• {b1}</p>
             <p className="addon-body">• {b2}</p>
             <p className="addon-body">• {b3}</p>
           </li>

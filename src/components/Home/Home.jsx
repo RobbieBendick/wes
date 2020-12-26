@@ -12,6 +12,7 @@ function Home() {
   });
 
   return (
+    // Medium, Narrow or Wide class depending on size
     <div
       className={`homeCard ${
         windowSize.width > 600 && windowSize.width < 1100
@@ -132,6 +133,7 @@ function HomeCard() {
           last={true}
         />
       </ul>
+      {/* background img */}
       <img
         className="background-img"
         src="/images/wes.jpg"

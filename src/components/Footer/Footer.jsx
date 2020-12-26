@@ -5,6 +5,7 @@ import "./Footer.css";
 function Footer() {
   const windowSize = useWindowSize();
   return (
+    // Medium, Narrow or Wide class depending on size
     <div
       id="footer"
       className={`footer ${
@@ -25,6 +26,7 @@ function FooterCard() {
 
   return (
     <div>
+      {/* robdog copyright */}
       <i
         style={{
           fontSize: "11px",
@@ -34,11 +36,9 @@ function FooterCard() {
       >
         Robdog © {year}
       </i>
-      <a
-        style={{ paddingLeft: "10px", color: "#fff" }}
-        href="http://www.twitter.com/mageiden"
-      >
-        <i class="fab fa-twitter"></i>
+      {/* twitter link */}
+      <a href="http://www.twitter.com/mageiden">
+        <i className="fab fa-twitter"></i>
       </a>
     </div>
   );

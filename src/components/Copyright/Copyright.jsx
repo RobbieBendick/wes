@@ -5,12 +5,13 @@ import "./Copyright.css";
 function Copyright() {
   const windowSize = useWindowSize();
   return (
+    // Medium, Narrow or Wide class depending on size
     <div
       id="footer"
       className={`copyright ${
         windowSize.width > 600 && windowSize.width < 1100
           ? "med"
-          : windowSize.width > 1100
+          : windowSize.width >= 1100
           ? "wide"
           : "narrow"
       }`}
@@ -39,7 +40,7 @@ function CopyrightCard() {
         style={{ paddingLeft: "10px", color: "#fff" }}
         href="http://www.twitter.com/mageiden"
       >
-        <i class="fab fa-twitter"></i>
+        <i className="fab fa-twitter"></i>
       </a>
     </div>
   );

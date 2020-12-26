@@ -33,6 +33,7 @@ function Header() {
             <a
               className="social-media-icon"
               href="https://www.twitch.tv/wayser"
+              target="_blank"
             >
               <i className="fab fa-twitch"></i>
             </a>

@@ -2,42 +2,42 @@
   padding-top: -3rem;
 }
 
-.homeCard.narrow ul img {
+.homeView.narrow ul img {
   width: 250px;
   height: 200px;
 }
 
-.homeCard.narrow button {
+.homeView.narrow button {
   width: 20%;
   text-align: center;
 }
 
-.homeCard.narrow ul li {
+.homeView.narrow ul li {
   padding-right: 5px;
 }
 
-.homeCard.med {
+.homeView.med {
   padding-left: 150px;
 }
 
-.homeCard.med ul img {
+.homeView.med ul img {
   width: 400px;
   height: 300px;
 }
 
-.homeCard.med p {
+.homeView.med p {
   font-size: x-large;
 }
 
-.homeCard.med nav div ul li {
+.homeView.med nav div ul li {
   padding-bottom: 10px;
 }
 
-.homeCard.wide {
+.homeView.wide {
   padding-bottom: 150px;
 }
 
-.homeCard.narrow {
+.homeView.narrow {
   padding-bottom: 150px;
 }
 

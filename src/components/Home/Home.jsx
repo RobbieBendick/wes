@@ -14,7 +14,7 @@ function Home() {
   return (
     // Medium, Narrow or Wide class depending on size
     <div
-      className={`homeCard ${
+      className={`homeView ${
         windowSize.width > 600 && windowSize.width < 1100
           ? "med"
           : windowSize.width <= 600
@@ -22,12 +22,12 @@ function Home() {
           : "wide"
       }`}
     >
-      <HomeCard></HomeCard>
+      <HomeView></HomeView>
     </div>
   );
 }
 
-function HomeCard() {
+function HomeView() {
   return (
     <div id="map" className="pad">
       <ul>

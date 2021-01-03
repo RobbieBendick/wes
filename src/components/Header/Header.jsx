@@ -32,22 +32,32 @@ function Header() {
           <ul className="px-3 social">
             <a
               className="social-media-icon"
-              href="https://www.twitch.tv/wayser"
               target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.twitch.tv/wayser"
             >
               <i className="fab fa-twitch"></i>
             </a>
-            <a className="social-media-icon" href="#">
+            <a
+              className="social-media-icon"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://steamcommunity.com/id/wayser"
+            >
               <i className="fab fa-steam"></i>
             </a>
             <a
               className="social-media-icon"
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://discordapp.com/users/125033567536283648"
             >
               <i className="fab fa-discord"></i>
             </a>
             <a
               className="social-media-icon"
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://www.last.fm/user/ifffy_"
             >
               <i className="fab fa-lastfm"></i>
